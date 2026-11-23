@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embedded Document Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 10px;
+        }
+
+        #viewer {
+            width: 90%;
+            height: 450px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 251, 229);
+        }
+
+        button {
+            padding: 5px 5px;
+            margin: 0 10px 10px 0;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 251, 229);
+        }
+
+        button:hover,
+        button:focus {
+            color: #fff;
+            background-color: rgb(162, 143, 237);
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Buttons to load different documents -->
+    <div>
+        <button onclick="loadDocument('/section4/4-1.html')">4.1</button>
+        <button onclick="loadDocument('/section4/4-2.html')">4.2</button>
+        <button onclick="loadDocument('/section4/4-3.html')">4.3</button>
+        <button onclick="loadDocument('/section4/4-4.html')">4.4</button>
+    </div>
+
+    <!-- Embedded window (iframe) -->
+    <iframe id="viewer" src="" frameborder="0"></iframe>
+
+    <!-- JavaScript to change iframe source -->
+    <script>
+        function loadDocument(url) {
+            document.getElementById('viewer').src = url;
+        }
+    </script>
+</body>
+
+</html>

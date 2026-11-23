@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звітний документ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #viewer {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-top: 20px;
+            background-color: rgb(245, 246, 243);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(245, 246, 243);
+        }
+
+        button:hover,
+        button:focus {
+            color: #fff;
+            background-color: rgb(162, 143, 237);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Звіти з лабораторних робіт з дисципліни "Основи WEB-технологій"</h1>
+    <h2>Студента групи ЗПІ-зп41 Д. Панчук</h2>
+
+    <!-- Buttons to load different documents -->
+    <div>
+        <button onclick="loadDocument('./section-2.html')">Розділ 2</button>
+        <button onclick="loadDocument('./section-3.html')">Розділ 3</button>
+        <button onclick="loadDocument('./section-4.html')">Розділ 4</button>
+        <button onclick="loadDocument('./section-5.html')">Розділ 5</button>
+        <button onclick="loadDocument('./section-6.html')">Розділ 6</button>
+        <button onclick="loadDocument('./section-7.html')">Розділ 7</button>
+        <button onclick="loadDocument('./section-8.html')">Розділ 8</button>
+        <button onclick="loadDocument('./section-9.html')">Розділ 9</button>
+        <button onclick="loadDocument('./section-10.html')">Розділ 10</button>
+    </div>
+
+    <!-- Embedded window (iframe) -->
+    <iframe id="viewer" src="" frameborder="0"></iframe>
+
+    <!-- JavaScript to change iframe source -->
+    <script>
+        function loadDocument(url) {
+            document.getElementById('viewer').src = url;
+        }
+    </script>
+</body>
+
+</html>
